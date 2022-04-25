@@ -1,0 +1,318 @@
+$boxShadow : -4px 0px 10px #FFFFFF, 0px -4px 10px #FFFFFF, 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+$marginBottom: 20px;
+$borderRadius: 30px;
+$background: rgb(246, 246, 246);
+$redColor: rgb(129, 30, 77); 
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    background-color: #f3f3f3;
+}
+
+
+.container {
+    padding: 50px;
+}
+
+h3 {
+    color: #515151;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+
+ /* TABLE cSS */
+table {
+    width: 100%;
+    table-layout: fixed;
+
+    th {
+        padding: 20px 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: grey;
+        font-weight: 600;
+        border-bottom: 2px #FBFBFB solid;
+        margin-bottom: 40px;
+        font-size: 12pt;
+    }
+   
+    td {
+       padding: 30px 0;
+       font-size: 12pt;
+       text-align: center;
+       vertical-align: middle;
+       font-weight: 300;
+       text-transform: capitalize;
+       border-bottom: solid 2px #FBFBFB;
+    }
+
+    
+    tr:hover {
+        background-color: #FBFBFB;
+    }
+
+}
+
+
+ section {
+     color: black;
+     border-radius: 15px;
+
+     .tbl-content {
+        height: 300px;
+        margin-top: 0px;
+        border: none;
+   
+    }
+   
+ }
+
+
+ .card-activity {
+    overflow: auto;
+    height: 321px;
+    padding: 20px 34px;
+    background: rgb(255, 255, 255);
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    margin-bottom: $marginBottom;
+    p {
+        font-weight: 600;
+        color: rgb(68, 68, 68);
+        padding-bottom: 10px;
+        border-bottom: solid 2px #FBFBFB;
+    }
+    h3 {
+        margin-bottom: $marginBottom;
+    }
+    h5 {
+        color: $redColor;
+    }
+   
+ }
+
+ 
+.canvas{
+    height: 80%
+}
+
+
+.head {
+    background-color: $redColor;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-totals {
+    padding: 20px 34px;
+    margin-bottom: $marginBottom;
+    background: rgb(246, 246, 246);
+    -webkit-box-shadow: $boxShadow;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+
+    .number {
+        color: $redColor;
+    }
+   
+}
+
+.overview {
+    margin: 0 auto;
+    padding: 20px 34px;
+    margin-bottom: $marginBottom;
+    background: rgb(246, 246, 246);
+    -webkit-box-shadow: $boxShadow;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    height: 547px;
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        select {
+            border-radius: $borderRadius;
+            padding: 5px 15px;
+        }
+
+        input {
+            background-color: $redColor;;
+            border: none;
+            padding: 10px;
+            color: white;
+            text-transform: uppercase;
+            border-radius: $borderRadius;
+        }
+        
+        input:hover {
+            background-color: #d54c8d;
+            cursor: pointer;
+        }
+        
+    }
+    
+}
+
+.card-graphs {
+    height: 321px;
+    padding: 20px 34px;
+    background: #f6f6f6;
+    -webkit-box-shadow: $boxShadow;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    margin-bottom: $marginBottom;
+}
+
+
+
+
+@media only screen and (min-width: 700px) {
+    .head {
+        text-align: left;
+    }
+
+    .totals {
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .card-totals {
+            padding: 20px 34px;
+            margin-bottom: $marginBottom;
+            background: rgb(246, 246, 246);
+            box-shadow: $boxShadow;
+            border-radius: $borderRadius;
+
+            .number {
+                color: $redColor;
+            }
+        }
+    }
+    .overview {
+        margin: 50px 0;
+    }
+
+    .graphs {
+        margin: 0 0 50px 0;
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: repeat(2, 1fr);
+
+        .card-graphs {
+            height: 321px;
+            padding: 20px 34px;
+            background: rgb(246, 246, 246);
+            box-shadow: $boxShadow;
+            border-radius: $borderRadius;
+            margin-bottom: $marginBottom;
+        }
+    }
+
+
+    .activity {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: repeat(2, 1fr);
+
+        .card-activity {
+            overflow: auto;
+            height: 321px;
+            background: rgb(246, 246, 246);
+            box-shadow: $boxShadow;
+            border-radius: $borderRadius;
+            margin-bottom: $marginBottom;
+
+            h3 {
+                margin-bottom: $marginBottom;
+                
+            }
+        }
+    }
+
+    
+    /* TABLE cSS */
+    table {
+        width: 100%;
+        table-layout: fixed;
+
+        th {
+            padding: 20px 15px;
+            text-align: center;
+            text-transform: uppercase;
+            color: grey;
+            font-weight: 600;
+            border-bottom: 2px #FBFBFB solid;
+            margin-bottom: 40px;
+            font-size: 12pt;
+        }
+        td {
+            padding: 30px 0;
+            font-size: 12pt;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: 300;
+            text-transform: capitalize;
+            border-bottom: solid 2px #FBFBFB;
+        }
+
+        tr:hover {
+            background-color: #FBFBFB;
+        }
+    }
+
+    
+
+    .tbl-content {
+        height: 300px;
+        margin-top: 0px;
+        border: none;
+
+    }
+
+
+    section {
+        color: black;
+        border-radius: 15px;
+    }
+
+    
+
+    .card-activity {
+        background: white;
+        p {
+            font-weight: 600;
+            color: rgb(68, 68, 68);
+        }
+
+        h5 {
+            color: $redColor;
+        }
+    }
+
+    
+
+    
+
+    input {
+        background-color: $redColor;
+        border: none;
+        padding: 10px;
+        color: white;
+        text-transform: uppercase;
+        border-radius: $borderRadius;
+    }
+
+    input:hover {
+        background-color: #d54c8d;
+        cursor: pointer;
+    }
+}
